@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image</title>
+</head>
+<body>
+    <h2>image chnage event handling</h2><hr>
+    SELECT IMG:-
+    <select name="" id="s1" onchange="updateimg()">
+        <option value="MB.jpg">MB</option>
+        <option value="nani.jpg">NANI</option>
+        <option value="pspk.jpg">PSPK</option>
+        <option value="rana.jpg">RANA</option>
+    </select><br><br>
+    <img src="images/MB.jpg" id="img1" border="2px" height="300" width="250">
+
+
+    <script>
+        function updateimg()
+        {
+            let selectobj = document.getElementById("s1");
+            let imgobj = document.getElementById("img1");
+            imgobj.src = "images/" + selectobj.value;
+        }
+    </script>
+</body>
+</html>
